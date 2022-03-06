@@ -1,9 +1,9 @@
 from twilio.rest import Client
 import requests
 import os
-api_key="a0d680c1352f007f28539ecf7c0d4527"
-account_sid="ACa20f58eb052f680b4ec397edbc1d6ae9"
-auth_token="05c0551007a19d93a915d39de087d93e"
+api_key="YOUR_apikey"
+account_sid="your acc_sid"
+auth_token="your auth_token"
 parameters={
     "lat":13.072090,
     "lon":80.201859,
@@ -26,12 +26,6 @@ if will_rain:
     message = client.messages \
         .create(
         body="Its gonna rain",
-        from_='+19362463180',
-        to='+918754280344'
+        from_='Twillio Phone no',
+        to='YOUR PHONE NO'
     )
-
-#api_key=os.environ.get("OWM_API_KEY")
-# account_sid = os.environ['TWILIO_ACCOUNT_SID']
-# auth_token = os.environ['TWILIO_AUTH_TOKEN']
-
-# print(message.sid)
